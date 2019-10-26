@@ -18,7 +18,25 @@ body {
 #mainNavbar .nav-link {
   color: white;
 }
-/* Add the color change on the nav-links using the hover method */
+/* add the color change on the nav-links using the hover method */
 #mainNavbar .nav-link:hover {
   color: #ea1c2c;
+}
+
+/* select the two slashes in the headingGroup to change its color */
+#headingGroup span {
+  color: #ea1c2c;
+}
+
+#headingGroup h1 {
+  font-weight: 100;
+  font-size: 4rem;
+}
+
+/* use media query to make the h1 text change size when the sceen's max width is at 1200px */
+@media (max-width: 1200px) {
+  #headingGroup h1 {
+    font-weight: 100;
+    font-size: 3rem;
+  }
 }

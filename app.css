@@ -1,0 +1,24 @@
+/* CSS file for Museum of Candy */
+body {
+  background: #f5d9d5;
+  font-family: "Nunito", sans-serif;
+}
+
+#mainNavbar {
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+/* use a nested selector to select the navbar-brand class, which is located within the mainNavbar ID */
+#mainNavbar .navbar-brand {
+  color: #ea1c2c;
+  font-size: 1.5rem;
+}
+
+#mainNavbar .nav-link {
+  color: white;
+}
+/* Add the color change on the nav-links using the hover method */
+#mainNavbar .nav-link:hover {
+  color: #ea1c2c;
+}

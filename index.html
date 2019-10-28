@@ -45,7 +45,7 @@
     <section class="container-fluid px-0">
       <div class="row align-items-center">
         <div class="col-lg-6">
-					<!-- The following words won't display on anything less than lg, after lg, display as block -->
+					<!-- The following words won't display on any screen less than lg, after lg, display as block -->
 					<div id="headingGroup" class="text-center text-white d-none d-lg-block mt-5">
             <h1 class="">MUSEUM<span>/</span>OF<span>/</span>CANDY</h1>
             <h1 class="">MUSEUM<span>/</span>OF<span>/</span>CANDY</h1>
@@ -73,7 +73,7 @@
 				<div class="col-md-6 text-center order-1 order-md-2">
 					<!-- Nest another div in order to make the text appear more centered in different screen sizes -->
 					<div class="row justify-content-center">
-						 <div class="col-10 col-lg-8 contentText">
+						 <div class="col-10 col-lg-8 contentText  mb-5 mb-md-0">
 							 <h2>MUSEUM OF CANDY</h2>
 							 <!-- Make the icon disappear when screen size is smaller than lg -->
 							<img src="img/lolli_icon.png" class="d-none d-lg-inline" alt="">
@@ -89,8 +89,8 @@
 				<div class="col-md-6 text-center">
 					<!-- Nest another div in order to make the text appear more centered in different screen sizes -->
 					<div class="row justify-content-center">
-						 <div class="col-10 col-lg-8 contentText">
-							 <h2>MUSEUM OF CANDY</h2>
+						 <div class="col-10 col-lg-8 contentText  mb-5 mb-md-0">
+							 <h2>GUMBALLS</h2>
 							 <!-- Make the icon disappear when screen size is smaller than lg -->
 							<img src="img/lolli_icon.png" class="d-none d-lg-inline" alt="">
 		 					<p class="lead">Candy ipsum dolor. Sit amet pudding cotton candy topping danish sugar plum. Lollipop powder candy caramels chocolate bar lollipop candy canes dessert toffee.
@@ -104,11 +104,46 @@
 					<img src="img/gumball.png" class="img-fluid" alt="">
 				</div>
 			</div>
+
+			<div class="row align-items-center contentSpace">
+				<!-- Takes up half of the container space when reaching md screen size -->
+				<!-- When screen size reaches md, change visual order to be 1st to display, change order to 2nd when smaller than md -->
+				<div class="col-md-6 order-2 order-md-1">
+					<img src="img/sprinkles.png" class="img-fluid" alt="">
+				</div>
+
+				<div class="col-md-6 text-center order-1 order-md-2">
+					<!-- Nest another div in order to make the text appear more centered in different screen sizes -->
+					<div class="row justify-content-center">
+						 <div class="col-10 col-lg-8 contentText mb-5 mb-md-0">
+							 <h2>SPRINKLES</h2>
+							 <!-- Make the icon disappear when screen size is smaller than lg -->
+							<img src="img/lolli_icon.png" class="d-none d-lg-inline" alt="">
+		 					<p class="lead">Candy ipsum dolor. Sit amet pudding cotton candy topping danish sugar plum. Lollipop powder candy caramels chocolate bar lollipop candy canes dessert toffee.
+		 						 Chocolate bar croissant carrot cake. Jujubes sugar plum bonbon marzipan pastry. Gummi bears cookie croissant dessert sesame snaps bonbon oat cake lollipop.
+							 </p>
+							</div>
+					</div>
+				</div>
+			</div>
 		</section>
 
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+		<script>
+			// Anytime the page scrolls, check if the top of the scroll is greater than nav height
+			// If yes, toggle on the .scrolled class in CSS
+			$(function() {
+				$(document).scroll(function() {
+					var $nav = $("#mainNavbar");
+					$nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+				})
+			})
+		</script>
+
+
 	</body>
 </html>

@@ -49,6 +49,13 @@ body {
   font-size: 4rem;
 }
 
+/* the jQuery class that is used to transform navbar color when scrolling */
+.navbar.scrolled {
+  background: rgb(222, 192, 222);
+  transition: background 500ms;
+}
+
+
 /* use media query to make the h1 text change size when the sceen's max width is at 1200px */
 @media (max-width: 1200px) {
   #headingGroup h1 {
